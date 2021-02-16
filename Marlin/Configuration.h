@@ -150,7 +150,7 @@
 
 // Name displayed in the LCD "Ready" message and Info menu
 #ifdef QQSP
-  #define CUSTOM_MACHINE_NAME "DeltaFoxies QQS-Pro"
+  #define CUSTOM_MACHINE_NAME "Dads QQS-Pro"
 #endif
 #ifdef Q5
   #define CUSTOM_MACHINE_NAME "DeltaFoxies Q5"
@@ -522,9 +522,9 @@
       #define DEFAULT_Kd 57.54
     #else
     // FLSUN QQ-S, 200 C with 100% part cooling
-      #define DEFAULT_Kp  28.16
-      #define DEFAULT_Ki   3.38
-      #define DEFAULT_Kd  58.69
+      #define DEFAULT_Kp  19.94
+      #define DEFAULT_Ki   1.58
+      #define DEFAULT_Kd  62.74
     #endif
     // FLSUN QQS-Pro, PET 235 C with 70% part cooling
     //M301 P21.67 I1.25 D93.81        PLA
@@ -1425,10 +1425,10 @@
  */
 #define FILAMENT_RUNOUT_SENSOR
 #if ENABLED(FILAMENT_RUNOUT_SENSOR)
-  #define FIL_RUNOUT_ENABLED_DEFAULT false // Enable the sensor on startup. Override with M412 followed by M500.
+  #define FIL_RUNOUT_ENABLED_DEFAULT true // Enable the sensor on startup. Override with M412 followed by M500.
   #define NUM_RUNOUT_SENSORS   1          // Number of sensors, up to one per extruder. Define a FIL_RUNOUT#_PIN for each.
 
-  #define FIL_RUNOUT_STATE     LOW        // Pin state indicating that filament is NOT present.
+  #define FIL_RUNOUT_STATE     HIGH        // Pin state indicating that filament is NOT present.
   #define FIL_RUNOUT_PULLUP               // Use internal pullup for filament runout pins.
   //#define FIL_RUNOUT_PULLDOWN           // Use internal pulldown for filament runout pins.
 
@@ -1839,7 +1839,7 @@
 // Preheat Constants - Up to 5 are supported without changes
 //
 #define PREHEAT_1_LABEL       "PLA"
-#define PREHEAT_1_TEMP_HOTEND 210
+#define PREHEAT_1_TEMP_HOTEND 200
 #define PREHEAT_1_TEMP_BED     60
 #define PREHEAT_1_FAN_SPEED   255 // Value from 0 to 255
 
@@ -1854,8 +1854,8 @@
 #define PREHEAT_3_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_4_LABEL       "PETG"
-#define PREHEAT_4_TEMP_HOTEND 240
-#define PREHEAT_4_TEMP_BED     80
+#define PREHEAT_4_TEMP_HOTEND 225
+#define PREHEAT_4_TEMP_BED     70
 #define PREHEAT_4_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_5_LABEL       "UBL"
